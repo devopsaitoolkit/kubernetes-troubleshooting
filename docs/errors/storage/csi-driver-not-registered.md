@@ -128,7 +128,7 @@ ebs-csi-node-abcde   2/3   CrashLoopBackOff   node-7
 ## References
 
 - [CSI Volume Plugins](https://kubernetes.io/docs/concepts/storage/volumes/#csi)
-- [CSI Node objects](https://kubernetes.io/docs/concepts/storage/csi/)
+- [CSI Node objects](https://kubernetes.io/docs/concepts/storage/volumes/)
 
 ## Further Reading
 

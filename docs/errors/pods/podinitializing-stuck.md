@@ -132,7 +132,7 @@ and no recurring `FailedMount` events.
 ## References
 
 - [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-- [Configure a Pod to Use a PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/)
+- [Configure a Pod to Use a PersistentVolume](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
 
 ## Further Reading
 

@@ -89,8 +89,8 @@ Configuration, limits, probes, policies, or CI checks that stop this recurring.
 
 ## Related Errors
 
-- [ImagePullBackOff](../pods/imagepullbackoff.md)
-- [OOMKilled](../pods/oomkilled.md)
+- [ImagePullBackOff](pods/imagepullbackoff.md)
+- [OOMKilled](pods/oomkilled.md)
 
 ## References
 

@@ -130,7 +130,7 @@ and avoid deleting PriorityClasses still referenced by live workloads.
 ## References
 
 - [Pod Priority and Preemption](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/)
-- [PriorityClass API reference](https://kubernetes.io/docs/reference/kubernetes-api/policy-resources/priority-class-v1/)
+- [PriorityClass API reference](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/)
 
 ## Further Reading
 
