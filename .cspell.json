@@ -1,0 +1,46 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "tools/index.json",
+    "LICENSE",
+    "LICENSE-CODE",
+    "sample-logs/**",
+    "**/*.svg"
+  ],
+  "dictionaries": ["en_US", "softwareTerms", "k8s-terms"],
+  "dictionaryDefinitions": [
+    { "name": "k8s-terms", "path": "./.cspell-dict.txt", "addWords": true }
+  ],
+  "allowCompoundWords": true,
+  "words": [
+    "kubernetes", "kubectl", "kubelet", "kubeadm", "kubeconfig", "kube",
+    "crashloopbackoff", "imagepullbackoff", "oomkilled", "errimagepull",
+    "containercreating", "createcontainerconfigerror", "failedscheduling",
+    "nodenotready", "evicted", "failedmount", "failedattachvolume",
+    "etcd", "etcdctl", "coredns", "calico", "cilium", "flannel", "kube-proxy",
+    "ingress", "nginx", "traefik", "metallb", "cni", "cri", "containerd",
+    "runc", "crictl", "cgroup", "cgroups", "kubeapi", "apiserver",
+    "daemonset", "daemonsets", "statefulset", "statefulsets", "replicaset",
+    "configmap", "configmaps", "namespace", "namespaces", "serviceaccount",
+    "rbac", "clusterrole", "clusterrolebinding", "rolebinding", "psp",
+    "pvc", "pvcs", "pv", "csi", "storageclass", "provisioner", "topolvm",
+    "hpa", "vpa", "metrics-server", "prometheus", "grafana", "alertmanager",
+    "cert-manager", "letsencrypt", "acme", "webhook", "webhooks", "mutating",
+    "validating", "admission", "finalizer", "finalizers", "taint", "taints",
+    "toleration", "tolerations", "affinity", "podantiaffinity", "topologyspread",
+    "liveness", "readiness", "startupprobe", "sysctl", "conntrack", "iptables",
+    "ipvs", "eviction", "preemption", "scheduler", "descheduler", "karpenter",
+    "cluster-autoscaler", "x509", "tls", "sni", "kubeletconfig", "journalctl",
+    "systemd", "syslog", "OpenShift", "openshift", "devopsaitoolkit",
+    "backoff", "ratelimit", "throttling", "qps", "burst", "leaderelection",
+    "endpointslice", "endpointslices", "kube-dns", "nodelocaldns", "dnsutils",
+    "containerd", "dockershim", "imagepull", "registry", "quay", "gcr", "ecr"
+  ],
+  "ignoreRegExpList": [
+    "/```[\\s\\S]*?```/",
+    "/`[^`]+`/",
+    "/\\bhttps?:\\/\\/\\S+/"
+  ]
+}

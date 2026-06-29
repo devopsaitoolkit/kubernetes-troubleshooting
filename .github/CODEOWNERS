@@ -1,0 +1,7 @@
+# Default owners for everything in the repo.
+* @devopsaitoolkit
+
+# Tooling
+/tools/   @devopsaitoolkit
+/scripts/ @devopsaitoolkit
+/.github/ @devopsaitoolkit

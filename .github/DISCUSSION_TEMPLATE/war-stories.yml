@@ -1,0 +1,31 @@
+title: "War story: <what broke>"
+labels: ["war-stories"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share a real Kubernetes incident — the symptoms, the rabbit holes, and
+        what actually fixed it. Great stories often become new error pages.
+        **Please redact** cluster names, IPs, and anything sensitive.
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: Symptoms
+      description: What did you see first? Alerts, user reports, events?
+    validations:
+      required: true
+  - type: textarea
+    id: investigation
+    attributes:
+      label: Investigation
+      description: How did you narrow it down? Which commands helped?
+  - type: textarea
+    id: rootcause
+    attributes:
+      label: Root cause & fix
+    validations:
+      required: true
+  - type: textarea
+    id: prevention
+    attributes:
+      label: How are you preventing it now?

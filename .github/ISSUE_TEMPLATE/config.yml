@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions — questions & war stories
+    url: https://github.com/devopsaitoolkit/kubernetes-troubleshooting/discussions
+    about: Ask a troubleshooting question or share an incident story.
+  - name: 📚 DevOps AI ToolKit — Kubernetes guides
+    url: https://devopsaitoolkit.com/blog/
+    about: Free, in-depth AI-assisted Kubernetes guides.
+  - name: 🧪 Free Kubernetes config validators
+    url: https://devopsaitoolkit.com/validators/
+    about: Validate YAML, manifests, and Helm charts in your browser.

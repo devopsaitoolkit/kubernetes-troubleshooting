@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Diagnostic bundles produced by scripts/ (never commit cluster data)
+diagnostics-*/
+*-diagnostics.tar.gz
+sample-logs/local-*

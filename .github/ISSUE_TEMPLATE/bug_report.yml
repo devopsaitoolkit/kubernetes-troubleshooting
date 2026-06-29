@@ -1,0 +1,35 @@
+name: "🐛 Tooling bug (search / scripts / CI)"
+description: Report a bug in search.py, the diagnostic scripts, or CI.
+title: "[bug] <short description>"
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - tools/search.py
+        - tools/build_index.py
+        - scripts/ (diagnostic scripts)
+        - GitHub Actions / CI
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Steps to reproduce, expected vs. actual.
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, kubectl version"
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: If this is about a script, I confirm I am reporting (not requesting) mutating behavior.

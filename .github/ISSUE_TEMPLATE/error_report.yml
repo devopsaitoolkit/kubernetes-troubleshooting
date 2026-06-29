@@ -1,0 +1,45 @@
+name: "📄 Error page: correction or improvement"
+description: Fix or improve an existing error page.
+title: "[error] <error name>: <what should change>"
+labels: ["documentation", "errors"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      description: Path or URL of the error page.
+      placeholder: docs/errors/pods/crashloopbackoff.md
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of change
+      options:
+        - Inaccurate root cause
+        - Command doesn't work / wrong output
+        - Missing common cause or fix
+        - Version-specific correction
+        - Unsafe recommendation
+        - Typo / formatting
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What's wrong and what should it say?
+      description: Be specific. Include the corrected command/output if you have it.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kubernetes version(s) observed
+      placeholder: "v1.29.4 (EKS)"
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: My suggested commands are read-only, or I have clearly marked any that are not.
+          required: true
