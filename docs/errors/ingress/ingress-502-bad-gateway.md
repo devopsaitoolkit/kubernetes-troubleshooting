@@ -109,6 +109,7 @@ upstream: "http://10.244.2.7:8080/api", host: "app.example.com"
 ```bash
 curl -I https://app.example.com/api
 ```
+
 Expect `HTTP/1.1 200` and clean controller logs with no `upstream prematurely
 closed` entries.
 

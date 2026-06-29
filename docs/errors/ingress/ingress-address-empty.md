@@ -106,6 +106,7 @@ ingress-nginx-controller   LoadBalancer   10.96.10.20    <pending>     80,443
 ```bash
 kubectl get ingress <ingress> -n <namespace>
 ```
+
 `ADDRESS` shows the external IP/hostname; `dig`/`curl` against it reaches the
 backend.
 

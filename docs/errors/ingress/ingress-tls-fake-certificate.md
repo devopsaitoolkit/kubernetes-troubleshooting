@@ -107,6 +107,7 @@ Error from server (NotFound): secrets "app-tls" not found
 openssl s_client -connect <ip>:443 -servername app.example.com </dev/null \
   2>/dev/null | openssl x509 -noout -issuer -dates
 ```
+
 Issuer is your real CA (e.g. Let's Encrypt), not the Fake Certificate, with a
 valid date range.
 

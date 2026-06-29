@@ -110,6 +110,7 @@ thread 'main' panicked at 'failed to spawn worker: Operation not permitted (os e
 kubectl get pod <pod> -n <namespace> -o jsonpath='{.status.phase}'
 kubectl logs <pod> -n <namespace> --since=2m
 ```
+
 The previously failing operation should now succeed and the `EPERM` lines should stop appearing in fresh logs.
 
 ## Prevention

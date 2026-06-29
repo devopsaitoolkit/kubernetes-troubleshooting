@@ -105,7 +105,7 @@ WARN admission handler took 7.8s (registry lookup) for review uid=abc...
    writes, temporarily set `failurePolicy: Ignore` or narrow its selector. Blast
    radius: with `Ignore`, the policy is not enforced for matching objects until
    restored — treat as a short, deliberate bypass.
-4. After fixing the backend, restore the original `failurePolicy`/scope.
+3. After fixing the backend, restore the original `failurePolicy`/scope.
 
 ## Validation
 

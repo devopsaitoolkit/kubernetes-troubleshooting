@@ -107,6 +107,7 @@ web-7d9c8f6b5-abcde    0/1     CrashLoopBackOff   6          10m
 kubectl get endpoints <service> -n <namespace>
 curl -I https://app.example.com/
 ```
+
 Endpoints list IP:port entries and curl returns 200.
 
 ## Prevention

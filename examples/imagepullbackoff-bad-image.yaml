@@ -1,0 +1,40 @@
+# =============================================================================
+# THROWAWAY / TEST CLUSTER ONLY — DO NOT APPLY TO PRODUCTION
+# =============================================================================
+# Purpose: intentionally reproduce ImagePullBackOff / ErrImagePull.
+#
+# This Pod references an image (and tag) that does not exist in any registry,
+# so the container runtime cannot pull it. The kubelet retries with backoff,
+# surfacing as ErrImagePull and then ImagePullBackOff.
+#
+# Learn the fix here:
+#   ../docs/errors/pods/imagepullbackoff.md
+#
+# Try it:
+#   kubectl apply -f imagepullbackoff-bad-image.yaml
+#   kubectl get pod imagepull-demo -w
+#   kubectl describe pod imagepull-demo   # look at the Events section
+#
+# Clean up:
+#   kubectl delete -f imagepullbackoff-bad-image.yaml
+# =============================================================================
+apiVersion: v1
+kind: Pod
+metadata:
+  name: imagepull-demo
+  labels:
+    app: imagepull-demo
+    purpose: throwaway-test
+spec:
+  restartPolicy: Always
+  containers:
+    - name: missing-image
+      # This repository/tag does not exist, so the pull always fails.
+      image: registry.example.invalid/nonexistent/app:v0.0.0-doesnotexist
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "50m"
+          memory: "32Mi"

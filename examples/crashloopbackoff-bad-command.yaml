@@ -1,0 +1,43 @@
+# =============================================================================
+# THROWAWAY / TEST CLUSTER ONLY — DO NOT APPLY TO PRODUCTION
+# =============================================================================
+# Purpose: intentionally reproduce a CrashLoopBackOff.
+#
+# This Pod runs a command that immediately exits with a non-zero status, so the
+# kubelet keeps restarting it and backs off, surfacing as CrashLoopBackOff.
+#
+# Learn the fix here:
+#   ../docs/errors/pods/crashloopbackoff.md
+#
+# Try it:
+#   kubectl apply -f crashloopbackoff-bad-command.yaml
+#   kubectl get pod crashloop-demo -w
+#   kubectl describe pod crashloop-demo
+#   kubectl logs crashloop-demo --previous
+#
+# Clean up:
+#   kubectl delete -f crashloopbackoff-bad-command.yaml
+# =============================================================================
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crashloop-demo
+  labels:
+    app: crashloop-demo
+    purpose: throwaway-test
+spec:
+  restartPolicy: Always
+  containers:
+    - name: bad-command
+      image: busybox:1.36
+      # This command exits 1 right away, so the container never stays up.
+      command: ["sh", "-c"]
+      args:
+        - "echo 'starting up...'; echo 'fatal: required config missing' >&2; exit 1"
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "50m"
+          memory: "32Mi"

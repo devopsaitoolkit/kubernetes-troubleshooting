@@ -114,6 +114,7 @@ Events:
 kubectl get pod <pod> -n <namespace> -o jsonpath='{.status.phase}'
 kubectl logs <pod> -n <namespace>
 ```
+
 The pod should reach `Running` and the application should emit its normal startup logs as the non-root user.
 
 ## Prevention

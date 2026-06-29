@@ -111,6 +111,7 @@ web    <none>   www.example.com             80      6m
 ```bash
 kubectl get ingress <ingress> -n <namespace>
 ```
+
 `CLASS` shows your controller and `ADDRESS` populates, confirming the controller
 claimed the Ingress.
 

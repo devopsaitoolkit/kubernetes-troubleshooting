@@ -5,8 +5,11 @@
   "MD034": false,
   "MD041": false,
   "MD024": { "siblings_only": true },
+  "MD025": { "front_matter_title": "" },
+  "MD026": false,
   "MD029": { "style": "ordered" },
-  "MD040": false,
   "MD036": false,
+  "MD040": false,
+  "MD060": false,
   "MD007": { "indent": 2 }
 }

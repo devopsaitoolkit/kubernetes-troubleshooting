@@ -2,7 +2,7 @@
 
 # 🛠️ kubernetes-troubleshooting
 
-### The comprehensive, production-grade Kubernetes troubleshooting knowledge base.
+**The comprehensive, production-grade Kubernetes troubleshooting knowledge base.**
 
 **300+ real production errors. Diagnostic flows. Recovery procedures. Read-only diagnostic scripts. Offline search.**
 Written by production SREs, for production SREs.

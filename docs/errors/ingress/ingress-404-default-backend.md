@@ -105,6 +105,7 @@ shop        web    nginx   www.example.com      203.0.113.10   80, 443
 ```bash
 curl -H "Host: app.example.com" -I http://<ingress-ip>/
 ```
+
 Returns the application response (e.g. 200/301) instead of `default backend -
 404`.
 

@@ -1,0 +1,44 @@
+# =============================================================================
+# THROWAWAY / TEST CLUSTER ONLY — DO NOT APPLY TO PRODUCTION
+# =============================================================================
+# Purpose: intentionally reproduce a Pod stuck in Pending (Unschedulable).
+#
+# This Pod combines two impossible constraints so the scheduler can never place
+# it:
+#   1. A nodeSelector for a label no node has.
+#   2. A CPU/memory request larger than any node can satisfy.
+# The Pod stays Pending with a FailedScheduling event.
+#
+# Learn the fix here:
+#   ../docs/errors/pods/pending.md
+#
+# Try it:
+#   kubectl apply -f pending-unschedulable.yaml
+#   kubectl get pod pending-demo -o wide
+#   kubectl describe pod pending-demo   # see Events: 0/N nodes are available
+#
+# Clean up:
+#   kubectl delete -f pending-unschedulable.yaml
+# =============================================================================
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pending-demo
+  labels:
+    app: pending-demo
+    purpose: throwaway-test
+spec:
+  # No node carries this label, so the Pod can never be scheduled.
+  nodeSelector:
+    disktype: this-label-does-not-exist
+  containers:
+    - name: app
+      image: nginx:1.27-alpine
+      resources:
+        requests:
+          # Absurdly large request that no real node can satisfy.
+          cpu: "1000"
+          memory: "4096Gi"
+        limits:
+          cpu: "1000"
+          memory: "4096Gi"

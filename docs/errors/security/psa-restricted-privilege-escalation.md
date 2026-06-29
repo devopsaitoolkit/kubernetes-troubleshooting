@@ -109,6 +109,7 @@ kubectl get events -n <namespace> --sort-by=.lastTimestamp
 kubectl get pods -n <namespace> -l app=<app>
 kubectl get deployment <deploy> -n <namespace> -o jsonpath='{.spec.template.spec.containers[*].securityContext}'
 ```
+
 Pods should reach `Running` and the container `securityContext` should echo back the hardened fields.
 
 ## Prevention

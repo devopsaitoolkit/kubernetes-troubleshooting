@@ -105,6 +105,7 @@ upstream: "http://10.244.3.4:8080/reports/export", host: "app.example.com"
 ```bash
 time curl -I https://app.example.com/reports/export
 ```
+
 Response returns under the timeout with `HTTP/1.1 200` and no `upstream timed
 out` lines in controller logs.
 

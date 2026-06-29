@@ -106,6 +106,7 @@ $ kubectl get ingress web -n shop -o jsonpath=...
 ```bash
 curl -i https://app.example.com/api/users
 ```
+
 Returns the expected backend response and the controller log shows the correct
 upstream.
 
